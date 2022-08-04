@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width">
+
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand" href="#"><img src="img/ubaLogo.png" width="110px"/></a>
+        
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" > 
+    <i class="fas fa-bars"></i> 
+    </button>
+        
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="https://www.ubagroup.com/">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.ubagroup.com/about-uba/">contact us</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link disabled">Policy</a>
+    </li>
+    </ul>
+        
+    <form class="d-flex input-group w-auto">
+    <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+    </form>
+    </div>
+    </div>
+</nav>
+    <!-- send -->
+<form class="container">
+    <!-- Email input -->
+    <div class="form-outlin mb-4 disabled">
+    <h3 style="text-align:center;">Available Balance  &#x20A6</h3>
+     <input type="button" value="40000" id="MainB" class="form-control"/>
+    
+    </div>
+    <!--- bank name select -->
+<select class="form-contr" id="bank" onmouseout="onMouseEnter()">
+    <option selected value="select a bank">select a bank</option>
+    <option value="access">Access Bank</option>
+    <option value="citibank">Citibank</option>
+    <option value="diamond">Diamond Bank</option>
+    <option value="ecobank">Ecobank</option>
+    <option value="fidelity">Fidelity Bank</option>
+    <option value="firstbank">First Bank</option>
+    <option value="fcmb">First City Monument Bank (FCMB)</option>
+    <option value="gtb">Guaranty Trust Bank (GTB)</option>
+    <option value="heritage">Heritage Bank</option>
+    <option value="keystone">Keystone Bank</option>
+    <option value="polaris">Polaris Bank</option>
+    <option value="providus">Providus Bank</option>
+    <option value="stanbic">Stanbic IBTC Bank</option>
+    <option value="standard">Standard Chartered Bank</option>
+    <option value="sterling">Sterling Bank</option>
+    <option value="suntrust">Suntrust Bank</option>
+    <option value="union">Union Bank</option>
+    <option value="uba">United Bank for Africa (UBA)</option>
+    <option value="unity">Unity Bank</option>
+    <option value="wema">Wema Bank</option>
+    <option value="zenith">Zenith Bank</option>
+</select>
+    <!-- Password input -->
+    <div class="form-outlin mb-4">
+    <label class="form-label" for="form1Example2">Account number</label>
+    <input type="" id="Account" class="edit-input" value="" onkeyup="onKeyup();" />
+    <span id="display-msg" style="display:none"></span>
+        
+    </div>
+    <div class="form-outlin mb-4">
+    <label class="form-label" for="form1Example2">Amount</label>
+    <input id="send" value="" class="edit-input" onkeyup="onKeyupSecond();">
+     <span id="display-msgTwo" style="display:none"></span>
+        
+    </div>
+    
+
+    <!-- Modal contents -->
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header" style="background-color:red; color:white;">
+    <h4 class="modal-title" id="exampleModalLabel">SUCCESS</h4>
+    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close" onclick="windowReload();"></button>
+    </div>
+    <div class="modal-body">
+        <i class="fa fa-check-circle fa-6x" style="color:green; text-align:center;"></i>
+        </div>
+        <div class="modal-body">
+        <h2 style="text-align:center;">SUCCESSFUL</h2>
+        </div>
+        
+        <div class="modal-body">
+        <span style="text-align:center;" id="Notification-msg"></span>
+        </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-danger" onclick="windowReload();" data-mdb-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-danger" onclick="windowReload();" data-mdb-dismiss="modal">Save changes</button>
+    </div>
+    </div>
+    </div>
+</div>
+
+    <!-- Submit button -->
+    <button type="button" class="btn btn-danger btn-block" id="Button" onclick="PerformOperation()";>Send</button>
+</form><br>
+ <!-- Footer -->
+<footer class="page-footer font-small blue" style="background-color:white;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:<a href="https://www.ubagroup.com/">Official UBA.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+</body>

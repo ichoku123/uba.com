@@ -1,0 +1,32 @@
+.form-outline{
+    border: none!important;
+}
+#MainB{
+    font-size: 23px;
+}
+.edit-input:focus {
+  background-color:red;
+  color:white;
+  font-size: 20px;
+}
+.edit-input{
+    border: 2px solid red;
+}
+.modal-body{
+    display:flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+form{
+    padding: 17px;
+}
+select{
+    padding: 8px;
+}
+option:hover{
+    background: red;
+}
+input{
+    padding: 4px;
+    margin: 5px;
+}
